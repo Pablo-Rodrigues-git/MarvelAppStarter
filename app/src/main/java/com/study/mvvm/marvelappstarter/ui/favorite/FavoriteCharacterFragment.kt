@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import com.study.mvvm.marvelappstarter.databinding.FragmentFavoriteCharacterBinding
-import com.study.mvvm.marvelappstarter.ui.BaseFragment
+import com.study.mvvm.marvelappstarter.ui.base.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

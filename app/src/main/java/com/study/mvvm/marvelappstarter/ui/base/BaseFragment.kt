@@ -1,4 +1,4 @@
-package com.study.mvvm.marvelappstarter.ui
+package com.study.mvvm.marvelappstarter.ui.base
 
 import android.os.Bundle
 import android.view.LayoutInflater
