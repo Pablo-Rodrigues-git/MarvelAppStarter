@@ -1,7 +1,7 @@
 package com.study.mvvm.marvelappstarter
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.study.mvvm.marvelappstarter.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

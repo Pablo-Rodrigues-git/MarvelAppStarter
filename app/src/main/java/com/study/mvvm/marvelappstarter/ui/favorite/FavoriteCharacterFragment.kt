@@ -3,8 +3,8 @@ package com.study.mvvm.marvelappstarter.ui.favorite
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import com.study.mvvm.marvelappstarter.databinding.FragmentFavoriteCharacterBinding
 import com.study.mvvm.marvelappstarter.ui.BaseFragment
-import daniel.lop.io.marvelappstarter.databinding.FragmentFavoriteCharacterBinding
 
 class FavoriteCharacterFragment :
     BaseFragment<FragmentFavoriteCharacterBinding, FavoriteCharacterFragmentViewModel>() {
