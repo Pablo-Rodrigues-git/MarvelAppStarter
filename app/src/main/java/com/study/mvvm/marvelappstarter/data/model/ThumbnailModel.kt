@@ -2,7 +2,7 @@ package com.study.mvvm.marvelappstarter.data.model
 
 import com.google.gson.annotations.SerializedName
 
-data class Thumbnail(
+data class ThumbnailModel(
     @SerializedName("path")
     val path: String,
     @SerializedName("extension")
