@@ -9,7 +9,11 @@
         android:id="@+id/detailsCharacterFragment"
         android:name="com.study.mvvm.marvelappstarter.ui.detais.DetailsCharacterFragment"
         android:label="DetailsCharacterFragment"
-        tools:layout="@layout/fragment_details_character" />
+        tools:layout="@layout/fragment_details_character" >
+        <argument
+            android:name="character"
+            app:argType="com.study.mvvm.marvelappstarter.data.model.character.CharacterModel" />
+    </fragment>
     <fragment
         android:id="@+id/favoriteCharacterFragment"
         android:name="com.study.mvvm.marvelappstarter.ui.favorite.FavoriteCharacterFragment"
@@ -28,7 +32,7 @@
             android:id="@+id/action_listCharacterFragment_to_detailsCharacterFragment"
             app:destination="@id/detailsCharacterFragment" />
         <argument
-            android:name="characterid"
+            android:name="character"
             app:argType="com.study.mvvm.marvelappstarter.data.model.character.CharacterModel" />
     </fragment>
     <fragment
