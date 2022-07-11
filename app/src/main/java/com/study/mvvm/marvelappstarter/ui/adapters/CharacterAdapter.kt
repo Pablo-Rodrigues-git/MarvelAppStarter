@@ -1,7 +1,6 @@
 package com.study.mvvm.marvelappstarter.ui.adapters
 
 import android.view.LayoutInflater
-import android.view.OrientationEventListener
 import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
