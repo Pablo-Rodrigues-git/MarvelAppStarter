@@ -41,7 +41,7 @@
         android:label="SearchCharacterFragment"
         tools:layout="@layout/fragment_search_character">
         <action
-            android:id="@+id/action_searchCharacterFragment_to_detailsCharacterFragment2"
+            android:id="@+id/action_searchCharacterFragment_to_detailsCharacterFragment"
             app:destination="@id/detailsCharacterFragment" />
     </fragment>
 </navigation>
