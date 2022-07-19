@@ -2,6 +2,7 @@ package com.study.mvvm.marvelappstarter.ui.detais
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.study.mvvm.marvelappstarter.data.model.character.CharacterModel
 import com.study.mvvm.marvelappstarter.data.model.comic.ComicModelResponse
 import com.study.mvvm.marvelappstarter.repository.MarvelRepository
 import com.study.mvvm.marvelappstarter.ui.state.ResourceState
@@ -47,5 +48,9 @@ class DetailsCharacterFragmentViewModel @Inject constructor(
             }
         }
         return ResourceState.Error(response.message())
+    }
+
+    fun insert(characterModel: CharacterModel) = viewModelScope.launch {
+        repository.insert(characterModel)
     }
 }
