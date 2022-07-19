@@ -34,12 +34,12 @@ class ListCharacterViewModel @Inject constructor(
         try {
             val response = repository.list()
             _list.value = handleResponse(response)
-        }catch (t: Throwable) {
-            when(t) {
-                is IOException -> _list.value = ResourceState.Error("Erro de conexão com a internet")
+        } catch (t: Throwable) {
+            when (t) {
+                is IOException -> _list.value =
+                    ResourceState.Error("Erro de conexão com a internet")
                 else -> _list.value = ResourceState.Error("Falha na conversão de dados")
             }
-
         }
     }
 
