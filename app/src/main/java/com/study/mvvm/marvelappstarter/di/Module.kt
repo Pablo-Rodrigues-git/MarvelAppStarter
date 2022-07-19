@@ -1,11 +1,16 @@
 package com.study.mvvm.marvelappstarter.di
 
+import android.content.Context
+import androidx.room.Room
+import com.study.mvvm.marvelappstarter.data.local.MarvelDataBase
 import com.study.mvvm.marvelappstarter.data.remote.ServiceApi
 import com.study.mvvm.marvelappstarter.util.Constants
 import com.study.mvvm.marvelappstarter.util.Constants.BASE_URL
+import com.study.mvvm.marvelappstarter.util.Constants.DATABASE_NAME
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -20,6 +25,21 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object Module {
+
+    @Singleton
+    @Provides
+    fun provideMarvelDataBase(
+
+        @ApplicationContext context: Context,
+    ) = Room.databaseBuilder(
+        context,
+        MarvelDataBase::class.java,
+        DATABASE_NAME
+    ).build()
+
+    @Singleton
+    @Provides
+    fun provideMarvelDao(dataBase: MarvelDataBase) = dataBase.marvelDao()
 
     @Singleton // responsible for creating unique instance
     @Provides // responsible for using the instance
