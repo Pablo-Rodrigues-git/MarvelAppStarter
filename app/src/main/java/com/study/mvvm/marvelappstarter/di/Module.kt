@@ -6,7 +6,6 @@ import com.study.mvvm.marvelappstarter.BuildConfig
 import com.study.mvvm.marvelappstarter.data.local.MarvelDataBase
 import com.study.mvvm.marvelappstarter.data.remote.ServiceApi
 import com.study.mvvm.marvelappstarter.util.Constants
-import com.study.mvvm.marvelappstarter.util.Constants.BASE_URL
 import com.study.mvvm.marvelappstarter.util.Constants.DATABASE_NAME
 import dagger.Module
 import dagger.Provides
