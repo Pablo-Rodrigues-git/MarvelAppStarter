@@ -2,6 +2,7 @@ package com.study.mvvm.marvelappstarter.di
 
 import android.content.Context
 import androidx.room.Room
+import com.study.mvvm.marvelappstarter.BuildConfig
 import com.study.mvvm.marvelappstarter.data.local.MarvelDataBase
 import com.study.mvvm.marvelappstarter.data.remote.ServiceApi
 import com.study.mvvm.marvelappstarter.util.Constants
@@ -73,7 +74,7 @@ object Module {
     @Provides
     fun provideRetrofit(client: OkHttpClient): Retrofit {
         return Retrofit.Builder()
-            .baseUrl(BASE_URL)
+            .baseUrl(BuildConfig.API_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .client(client)
             .build()
