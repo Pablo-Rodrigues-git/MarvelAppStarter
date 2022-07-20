@@ -41,12 +41,11 @@ class FavoriteCharacterFragment :
                         binding.tvEmptyList.hide()
                         characterAdapter.characters = it.toList()
                     }
-
                 }
                 is ResourceState.Empty -> {
                     binding.tvEmptyList.show()
                 }
-                else -> {}
+                else -> Unit
             }
         }
 
@@ -82,7 +81,6 @@ class FavoriteCharacterFragment :
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
                 val character = characterAdapter
             }
-
         }
     }
 

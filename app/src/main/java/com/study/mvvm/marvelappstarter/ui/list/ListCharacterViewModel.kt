@@ -6,6 +6,7 @@ import com.study.mvvm.marvelappstarter.data.model.character.CharacterModelRespon
 import com.study.mvvm.marvelappstarter.repository.MarvelRepository
 import com.study.mvvm.marvelappstarter.ui.state.ResourceState
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
@@ -26,7 +27,7 @@ class ListCharacterViewModel @Inject constructor(
         fetch()
     }
 
-    private fun fetch() = viewModelScope.launch {
+    private fun fetch() = viewModelScope.launch(Dispatchers.IO) {
         safeFetch()
     }
 
@@ -34,8 +35,8 @@ class ListCharacterViewModel @Inject constructor(
         try {
             val response = repository.list()
             _list.value = handleResponse(response)
-        } catch (t: Throwable) {
-            when (t) {
+        } catch (exception: Throwable) {
+            when (exception) {
                 is IOException -> _list.value =
                     ResourceState.Error("Erro de conexão com a internet")
                 else -> _list.value = ResourceState.Error("Falha na conversão de dados")
@@ -49,6 +50,6 @@ class ListCharacterViewModel @Inject constructor(
                 return ResourceState.Sucess(values)
             }
         }
-        return ResourceState.Error(response.message())
+        return ResourceState.Error("${response.code()} ${response.message()}")
     }
 }

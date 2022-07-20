@@ -55,7 +55,7 @@ class ListCharacterFragment : BaseFragment<FragmentListCharacterBinding, ListCha
                 is ResourceState.Loading -> {
                     binding.progressCircular.show()
                 }
-                else -> {}
+                else -> Unit
             }
         }
     }
