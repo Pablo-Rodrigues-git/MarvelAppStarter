@@ -19,3 +19,5 @@ Lista de personagens, busca dentro da API, exibição de detalhes dos personagen
 - [x] [Glide](https://github.com/bumptech/glide)
 - [x] [Flow](https://developer.android.com/kotlin/flow#:~:text=In%20coroutines%2C%20a%20flow%20is,and%20can%20provide%20multiple%20values.)
 - [x] [State Flow](https://developer.android.com/kotlin/flow/stateflow-and-sharedflow#:~:text=In%20Android%2C%20StateFlow%20is%20a,screen%20state%20survive%20configuration%20changes.)
+
+<img src="app/images/marvelapp.gif" width="400">
